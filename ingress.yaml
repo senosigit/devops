@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: java-spring-ingress
+spec:
+  rules:
+  - http:
+      paths:
+        - path: /java-spring
+          backend:
+            serviceName: java-spring-service
+            servicePort: 8080
