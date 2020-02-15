@@ -17,15 +17,3 @@ spec:
         image: myapp:v1
         ports:
         - containerPort: 8080
-
----
-apiVersion: v1  
-kind: service
-metadata:
-  name: java-spring-service
-spec:
-  type: NodePort
-  ports:
-  - port: 8080
-  selector:
-    app: java-spring
